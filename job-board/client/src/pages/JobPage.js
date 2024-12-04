@@ -1,7 +1,6 @@
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { formatDate } from '../lib/formatters';
-import { jobs } from '../lib/fake-data';
 import { useEffect, useState } from 'react';
 import { getJob } from '../lib/graphql/queries';
 
