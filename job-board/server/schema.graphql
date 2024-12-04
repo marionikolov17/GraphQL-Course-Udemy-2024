@@ -3,7 +3,8 @@ type Query {
 }
 
 type Job {
-    id: ID
-    title: String
+    id: ID!
+    date: String!
+    title: String!
     description: String
 }
