@@ -4,7 +4,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "reset-db": "node scripts/create-db.js"
   },
   "dependencies": {
     "@apollo/server": "^4.11.2",
@@ -13,6 +14,7 @@
     "express": "^4.18.2",
     "express-jwt": "^8.4.1",
     "graphql": "^16.9.0",
+    "job-board-server": "file:",
     "jsonwebtoken": "^9.0.0",
     "knex": "^3.0.1",
     "nanoid": "^5.0.1"

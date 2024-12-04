@@ -10,6 +10,7 @@
     "bulma": "^0.9.4",
     "graphql": "^16.9.0",
     "graphql-request": "^7.1.2",
+    "job-board-client": "file:",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
