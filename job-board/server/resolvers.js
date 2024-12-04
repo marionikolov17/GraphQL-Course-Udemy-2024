@@ -22,7 +22,7 @@ export const resolvers = {
   },
 
   Mutation: {
-    createJob: (_root, { title, description }) => {
+    createJob: (_root, { input: { title, description } }) => {
       const companyId = "FjcJCHJALA4i";
       return createJob({ companyId, title, description });
     }
