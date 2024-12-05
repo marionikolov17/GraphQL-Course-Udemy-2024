@@ -20,6 +20,20 @@ export const apolloClient = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
+export const jobsQuery = gql`
+    query {
+        jobs {
+            id
+            date
+            title
+            company {
+                id
+                name
+            }
+        }
+    }
+`
+
 const jobDetailFragment = gql`
     fragment JobDetail on Job {
         id
@@ -33,7 +47,7 @@ const jobDetailFragment = gql`
     }
 `
 
-const jobByIdQuery = gql`
+export const jobByIdQuery = gql`
         query($id: ID!) {
             job(id: $id) {
                 ...JobDetail
