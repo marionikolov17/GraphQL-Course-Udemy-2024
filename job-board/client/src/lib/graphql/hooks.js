@@ -5,7 +5,6 @@ import {
   jobByIdQuery,
   jobsQuery,
 } from "./queries";
-import { useNavigate } from "react-router";
 
 export function useCompany(id) {
   const { data, loading, error } = useQuery(companyByIdQuery, {
@@ -31,8 +30,6 @@ export function useJobs() {
 export function useCreateJob() {
   const [mutate, result] = useMutation(createJobMutation);
 
-  const navigate = useNavigate();
-
   async function createJob(title, description) {
     const {
       data: { job },
@@ -46,8 +43,8 @@ export function useCreateJob() {
         });
       },
     });
-    navigate(`/jobs/${job.id}`);
-    console.log('should post a new job:', { title, description });
+
+    return job;
   }
 
   return { createJob, result }
