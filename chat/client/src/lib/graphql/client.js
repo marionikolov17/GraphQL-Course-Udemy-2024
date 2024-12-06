@@ -28,5 +28,5 @@ export const apolloClient = new ApolloClient({
 
 function isSubscription(operation) {
   const definition = getMainDefinition(operation.query);
-  return definition.kind === Kind.OPERATION_TYPE_DEFINITION && definition.operation === OperationTypeNode.SUBSCRIPTION;
+  return definition.kind === Kind.OPERATION_DEFINITION && definition.operation === OperationTypeNode.SUBSCRIPTION;
 }
