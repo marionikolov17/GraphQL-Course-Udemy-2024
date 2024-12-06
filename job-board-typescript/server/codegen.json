@@ -6,9 +6,10 @@
       "plugins": ["typescript", "typescript-resolvers"],
       "config": {
         "skipTypename": true,
+        "contextType": "../resolvers.js#ResolverContext",
         "mappers": {
-          "Company": "./src/db/types.ts#CompanyEntity",
-          "Job": "./src/db/types.ts#JobEntity"
+          "Company": "../db/types.js#CompanyEntity",
+          "Job": "../db/types.js#JobEntity"
         }
       }
     }
