@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon src/server.ts"
+    "start": "nodemon src/server.ts",
+    "codegen": "graphql-codegen --config codegen.json"
   },
   "dependencies": {
     "@apollo/server": "^4.9.4",
@@ -20,11 +21,16 @@
     "nanoid": "^5.0.1"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "5.0.3",
+    "@graphql-codegen/client-preset": "^4.5.1",
+    "@graphql-codegen/typescript": "4.1.2",
+    "@graphql-codegen/typescript-operations": "^4.4.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/cors": "^2.8.14",
     "nodemon": "^3.0.1",
     "tsx": "^4.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@graphql-codegen/typescript-resolvers": "4.4.1"
   },
   "nodemonConfig": {
     "ext": "graphql,ts",
