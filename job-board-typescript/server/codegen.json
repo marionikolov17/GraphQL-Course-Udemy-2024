@@ -5,7 +5,11 @@
     "src/generated/schema.ts": {
       "plugins": ["typescript", "typescript-resolvers"],
       "config": {
-        "skipTypename": true
+        "skipTypename": true,
+        "mappers": {
+          "Company": "./src/db/types.ts#CompanyEntity",
+          "Job": "./src/db/types.ts#JobEntity"
+        }
       }
     }
   }
